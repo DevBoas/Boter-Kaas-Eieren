@@ -105,14 +105,14 @@ namespace Boter_Kaas_Eieren
         private void button_click(object sender, EventArgs e)
         {
             Button b = (Button)sender;
-            if (b.Text == String.Empty)
+            if (b.Enabled)
             {
                 b.Enabled = false;
-                turn_count++;
                 if (is_odd())
                     b.Text = "O";
                 else
                     b.Text = "X";
+                turn_count++;
                 checkGame();
             }
         }
@@ -121,6 +121,29 @@ namespace Boter_Kaas_Eieren
         {
             turn_count = 0;
             reset_Buttons();
+        }
+
+        private void Display(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            if (b.Enabled)
+            {
+                b.ForeColor = System.Drawing.Color.Gray;
+                if (is_odd())
+                    b.Text = "O";
+                else
+                    b.Text = "X";
+            }
+        }
+
+        private void Remove(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            if (b.Enabled)
+            {
+                b.ForeColor = SystemColors.ControlDark;
+                b.Text = "";
+            }
         }
     }
 }

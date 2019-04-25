@@ -30,9 +30,9 @@ namespace Boter_Kaas_Eieren
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.A1 = new System.Windows.Forms.Button();
             this.A2 = new System.Windows.Forms.Button();
@@ -66,6 +66,20 @@ namespace Boter_Kaas_Eieren
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // newGameToolStripMenuItem
+            // 
+            this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.newGameToolStripMenuItem.Text = "New Game";
+            this.newGameToolStripMenuItem.Click += new System.EventHandler(this.NewGameToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -74,36 +88,25 @@ namespace Boter_Kaas_Eieren
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // newGameToolStripMenuItem
-            // 
-            this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.newGameToolStripMenuItem.Text = "New Game";
-            this.newGameToolStripMenuItem.Click += new System.EventHandler(this.NewGameToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
-            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
             // A1
             // 
             this.A1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.A1.Location = new System.Drawing.Point(33, 27);
             this.A1.Name = "A1";
             this.A1.Size = new System.Drawing.Size(75, 75);
             this.A1.TabIndex = 1;
             this.A1.UseVisualStyleBackColor = true;
             this.A1.Click += new System.EventHandler(this.button_click);
+            this.A1.MouseEnter += new System.EventHandler(this.Display);
+            this.A1.MouseLeave += new System.EventHandler(this.Remove);
             // 
             // A2
             // 
@@ -114,6 +117,8 @@ namespace Boter_Kaas_Eieren
             this.A2.TabIndex = 2;
             this.A2.UseVisualStyleBackColor = true;
             this.A2.Click += new System.EventHandler(this.button_click);
+            this.A2.MouseEnter += new System.EventHandler(this.Display);
+            this.A2.MouseLeave += new System.EventHandler(this.Remove);
             // 
             // A3
             // 
@@ -124,6 +129,8 @@ namespace Boter_Kaas_Eieren
             this.A3.TabIndex = 3;
             this.A3.UseVisualStyleBackColor = true;
             this.A3.Click += new System.EventHandler(this.button_click);
+            this.A3.MouseEnter += new System.EventHandler(this.Display);
+            this.A3.MouseLeave += new System.EventHandler(this.Remove);
             // 
             // B1
             // 
@@ -134,6 +141,8 @@ namespace Boter_Kaas_Eieren
             this.B1.TabIndex = 4;
             this.B1.UseVisualStyleBackColor = true;
             this.B1.Click += new System.EventHandler(this.button_click);
+            this.B1.MouseEnter += new System.EventHandler(this.Display);
+            this.B1.MouseLeave += new System.EventHandler(this.Remove);
             // 
             // B2
             // 
@@ -144,6 +153,8 @@ namespace Boter_Kaas_Eieren
             this.B2.TabIndex = 5;
             this.B2.UseVisualStyleBackColor = true;
             this.B2.Click += new System.EventHandler(this.button_click);
+            this.B2.MouseEnter += new System.EventHandler(this.Display);
+            this.B2.MouseLeave += new System.EventHandler(this.Remove);
             // 
             // B3
             // 
@@ -154,6 +165,8 @@ namespace Boter_Kaas_Eieren
             this.B3.TabIndex = 6;
             this.B3.UseVisualStyleBackColor = true;
             this.B3.Click += new System.EventHandler(this.button_click);
+            this.B3.MouseEnter += new System.EventHandler(this.Display);
+            this.B3.MouseLeave += new System.EventHandler(this.Remove);
             // 
             // C1
             // 
@@ -164,6 +177,8 @@ namespace Boter_Kaas_Eieren
             this.C1.TabIndex = 7;
             this.C1.UseVisualStyleBackColor = true;
             this.C1.Click += new System.EventHandler(this.button_click);
+            this.C1.MouseEnter += new System.EventHandler(this.Display);
+            this.C1.MouseLeave += new System.EventHandler(this.Remove);
             // 
             // C2
             // 
@@ -174,6 +189,8 @@ namespace Boter_Kaas_Eieren
             this.C2.TabIndex = 8;
             this.C2.UseVisualStyleBackColor = true;
             this.C2.Click += new System.EventHandler(this.button_click);
+            this.C2.MouseEnter += new System.EventHandler(this.Display);
+            this.C2.MouseLeave += new System.EventHandler(this.Remove);
             // 
             // C3
             // 
@@ -184,6 +201,8 @@ namespace Boter_Kaas_Eieren
             this.C3.TabIndex = 9;
             this.C3.UseVisualStyleBackColor = true;
             this.C3.Click += new System.EventHandler(this.button_click);
+            this.C3.MouseEnter += new System.EventHandler(this.Display);
+            this.C3.MouseLeave += new System.EventHandler(this.Remove);
             // 
             // Form1
             // 
