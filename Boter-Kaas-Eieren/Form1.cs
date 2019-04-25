@@ -89,9 +89,9 @@ namespace Boter_Kaas_Eieren
             {
                 String winner = "";
                 if (is_odd())
-                    winner = "O";
-                else
                     winner = "X";
+                else
+                    winner = "O";
                 MessageBox.Show(winner + " wins this round!", "Congratulations!");
                 disable_Buttons();
             }
